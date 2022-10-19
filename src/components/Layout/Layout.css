@@ -1,0 +1,14 @@
+.page {
+  display: grid;
+  grid-template-columns: 20vw auto;
+}
+.sidebar {
+  position: fixed;
+  width: 20vw;
+  background: #f8f8fa;
+  height: 100%;
+}
+.main {
+  grid-column-start: 2;
+  background: #ffffff;
+}

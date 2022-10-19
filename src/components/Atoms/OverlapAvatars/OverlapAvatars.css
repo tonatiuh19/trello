@@ -1,0 +1,17 @@
+.main-container {
+  height: fit-content;
+}
+
+#icons-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-right: -15px;
+}

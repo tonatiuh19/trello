@@ -1,0 +1,13 @@
+.container-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: centers;
+}
+
+.item-s {
+}
+
+.item-c {
+}
