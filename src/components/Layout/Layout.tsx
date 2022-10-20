@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
-import LayoutProps from "../../interfaces/Layout.interface";
-import ItemInfo from "../Molecules/ItemInfo/ItemInfo";
-import ItemUser from "../Molecules/ItemUser/ItemUser";
 import Header from "../Organisms/Header/Header";
 import "./Layout.css";
-
-import CollapseMenu from "../Molecules/CollapseMenu/CollapseMenu";
 import SubHeader from "../Organisms/SubHeader/SubHeader";
 import Sidebar from "../Organisms/Sidebar/Sidebar";
 
