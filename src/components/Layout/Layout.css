@@ -1,14 +1,30 @@
-.page {
+.page-wrapper {
   display: grid;
   grid-template-columns: 20vw auto;
 }
-.sidebar {
+
+.sidebar-wrapper {
   position: fixed;
   width: 20vw;
   background: #f8f8fa;
   height: 100%;
 }
-.main {
+
+.sidebar-wrapper-dark {
+  position: fixed;
+  width: 20vw;
+  background-color: #252424;
+  height: 100%;
+}
+
+.main-wrapper {
   grid-column-start: 2;
   background: #ffffff;
+  height: 100vh;
+}
+
+.main-wrapper-dark {
+  grid-column-start: 2;
+  background: #252424;
+  height: 100vh;
 }

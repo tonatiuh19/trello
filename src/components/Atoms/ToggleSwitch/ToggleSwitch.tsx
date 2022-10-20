@@ -1,7 +1,7 @@
 import React from "react";
 import "./ToggleSwitch.css";
 
-const ToggleSwitch = () => {
+const ToggleSwitch = (props: any) => {
   return (
     <div className="flipswitch">
       <input
@@ -9,6 +9,7 @@ const ToggleSwitch = () => {
         name="flipswitch"
         className="flipswitch-cb"
         id="fs"
+        onChange={props.onChange}
       />
       <label className="flipswitch-label" htmlFor="fs">
         <div className="flipswitch-inner"></div>

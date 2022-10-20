@@ -10,6 +10,7 @@ const ItemInfo = ({
   notification,
   title,
   variant,
+  active,
 }: ItemInfoProps) => {
   const [hoverRef, isHovered] = useHover<HTMLDivElement>();
 
@@ -32,9 +33,16 @@ const ItemInfo = ({
   };
 
   return (
-    <div className="container item-btn" ref={hoverRef}>
+    <div
+      className={
+        active
+          ? "container item-btn target item-btn-active"
+          : "container item-btn target"
+      }
+      ref={hoverRef}
+    >
       <div className="row ">
-        <div className="col-11 mt-1">
+        <div className="col-10 mt-1">
           <div className="float-start">
             <div
               className={variant ? `text-muted size-${variant}` : "text-muted"}
@@ -48,8 +56,10 @@ const ItemInfo = ({
             </div>
           </div>
         </div>
-        <div className="col-1">
-          <div className="float-end mt-1">{isNotification(isHovered)}</div>
+        <div className="col-2">
+          <div className="float-end mt-1">
+            {active ? isNotification(true) : isNotification(isHovered)}
+          </div>
         </div>
       </div>
     </div>

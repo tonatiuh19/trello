@@ -7,7 +7,7 @@ const ItemTitle = ({ title, children }: ItemTitleProps) => {
       <div className="row">
         <div className="col">
           <div className="float-end">
-            <span className="text-muted">{title}</span>
+            <small className="text-muted">{title}</small>
           </div>
         </div>
         <div className="col">
