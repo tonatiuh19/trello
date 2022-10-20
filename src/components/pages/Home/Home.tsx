@@ -4,6 +4,7 @@ import {
   fetchBoardList,
   updateLocalStorageBoards,
 } from "../../../utils/Functions/DataStore";
+import Loading from "../../Atoms/Loading/Loading";
 import Layout from "../../Layout/Layout";
 import Action from "../../Organisms/Action/Action";
 
@@ -12,6 +13,7 @@ const Home = () => {
   const [boards, setBoards] = useState<Board[]>([]);
   const [priority, setPriority] = useState("");
   const [theme, setTheme] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [targetCard, setTargetCard] = useState({
     boardId: 0,
     cardId: 0,
@@ -20,6 +22,7 @@ const Home = () => {
   async function fetchData() {
     const boards: Board[] = await fetchBoardList();
     setBoards(boards);
+    setLoading(false);
   }
 
   const removeBoard = (boardId: number) => {
@@ -129,6 +132,7 @@ const Home = () => {
   };
 
   useEffect(() => {
+    setLoading(true);
     if (dataFetchedRef.current) return;
     dataFetchedRef.current = true;
     fetchData();
@@ -141,25 +145,29 @@ const Home = () => {
   return (
     <Layout title="Stripe" onChange={getPriority} onChangeSelected={getTheme}>
       <div className="container">
-        <div className="row">
-          {boards.map((item) => {
-            return (
-              <div className="col-3" key={item.id}>
-                <Action
-                  board={item}
-                  addCard={addCardHandler}
-                  removeBoard={() => removeBoard(item.id)}
-                  removeCard={removeCard}
-                  onDragEnd={onDragEnd}
-                  onDragEnter={onDragEnter}
-                  updateCard={updateCard}
-                  priority={priority}
-                  theme={theme}
-                />
-              </div>
-            );
-          })}
-        </div>
+        {loading ? (
+          <Loading />
+        ) : (
+          <div className="row">
+            {boards.map((item) => {
+              return (
+                <div className="col-3" key={item.id}>
+                  <Action
+                    board={item}
+                    addCard={addCardHandler}
+                    removeBoard={() => removeBoard(item.id)}
+                    removeCard={removeCard}
+                    onDragEnd={onDragEnd}
+                    onDragEnter={onDragEnter}
+                    updateCard={updateCard}
+                    priority={priority}
+                    theme={theme}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </Layout>
   );
