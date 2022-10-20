@@ -11,15 +11,15 @@ const ItemUser = () => {
         <div className="col-3">
           <div className="float-end">
             <CircleUserImage
-              src="https://xsgames.co/randomusers/avatar.php?g=pixel"
+              src="https://robohash.org/sitvoluptasaccusamus.png?size=100x100&set=set1"
               variant="md"
             />
           </div>
         </div>
-        <div className="col-6 mt-1">
-          <div className="float-start">Felix Gomez</div>
+        <div className="col-7 mt-1">
+          <div className="float-start title-user">Tonatiuh Gomez</div>
         </div>
-        <div className="col-3">
+        <div className="col-2">
           <div className="float-end">
             <ButtonIcon variant="sm" onClick={() => console.log("Click")}>
               <TfiExchangeVertical />

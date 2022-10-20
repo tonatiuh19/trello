@@ -15,6 +15,7 @@ export interface ItemInfoProps {
   title?: string;
   onClick: () => void;
   notification?: string;
+  active?: boolean;
 }
 
 export interface CollapseMenuProps {

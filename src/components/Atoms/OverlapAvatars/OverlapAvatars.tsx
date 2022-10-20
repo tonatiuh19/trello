@@ -1,42 +1,37 @@
 import React from "react";
+import { User } from "../../../interfaces/Board.interface";
 import "./OverlapAvatars.css";
 
-const OverlapAvatars = () => {
+const OverlapAvatars = (props: any) => {
   return (
     <div className="main-container">
       <div id="icons-container">
-        <div className="single-icon-container">
-          <img
-            src="https://i.pravatar.cc/300"
-            alt=""
-            className="icon"
-            id="icon1"
-          />
-        </div>
-        <div className="single-icon-container">
-          <img
-            src="https://i.pravatar.cc/300"
-            alt=""
-            className="icon"
-            id="icon2"
-          />
-        </div>
-        <div className="single-icon-container">
-          <img
-            src="https://i.pravatar.cc/300"
-            alt=""
-            className="icon"
-            id="icon3"
-          />
-        </div>
-        <div className="single-icon-container">
-          <img
-            src="https://i.pravatar.cc/300"
-            alt=""
-            className="icon"
-            id="icon4"
-          />
-        </div>
+        {props.users.map((item: User, index: number) => {
+          if (props.header) {
+            if (index <= 2) {
+              return (
+                <div key={index} className="single-icon-container">
+                  <img src={item.picture} alt="" className="icon" id="icon1" />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          } else {
+            return (
+              <div key={index} className="single-icon-container">
+                <img src={item.picture} alt="" className="icon" id="icon1" />
+              </div>
+            );
+          }
+        })}
+        <>
+          {props.header ? (
+            <div className="single-icon-container">
+              <span className="icon icon-text">+4</span>
+            </div>
+          ) : null}
+        </>
       </div>
     </div>
   );

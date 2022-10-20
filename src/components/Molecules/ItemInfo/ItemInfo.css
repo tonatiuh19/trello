@@ -1,5 +1,5 @@
 .icon-size-sm {
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .icon-size-md {
@@ -7,7 +7,7 @@
 }
 
 .size-sm {
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .size-md {
@@ -31,4 +31,9 @@
 
 .item-btn:active {
   background-color: #ffffff;
+}
+
+.item-btn-active {
+  background-color: #ffffff;
+  filter: brightness(120%) saturate(120%);
 }

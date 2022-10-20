@@ -23,7 +23,7 @@ const SubHeader = () => {
           <div className="float-end">
             <div className="container">
               <div className="row">
-                <div className="col">
+                <div className="col-3">
                   <ItemInfo
                     title="Edit"
                     onClick={() => console.log("Click")}
@@ -31,7 +31,7 @@ const SubHeader = () => {
                     variant="sm"
                   />
                 </div>
-                <div className="col">
+                <div className="col-3">
                   <ItemInfo
                     title="Filter"
                     onClick={() => console.log("Click")}
@@ -39,7 +39,7 @@ const SubHeader = () => {
                     variant="sm"
                   />
                 </div>
-                <div className="col">
+                <div className="col-4">
                   <ItemInfo
                     title="Share"
                     onClick={() => console.log("Click")}
@@ -47,34 +47,13 @@ const SubHeader = () => {
                     variant="sm"
                   />
                 </div>
-                <div className="col">
-                  <div className="dropdown">
-                    <button
-                      className="btn btn-secondary dropdown-toggle"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <AiOutlineCloudDownload /> Export
-                    </button>
-                    <ul className="dropdown-menu">
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          Action
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          Another action
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          Something else here
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                <div className="col-2">
+                  <button
+                    className="btn btn-secondary dropdown-toggle"
+                    type="button"
+                  >
+                    <AiOutlineCloudDownload /> Export
+                  </button>
                 </div>
               </div>
             </div>
