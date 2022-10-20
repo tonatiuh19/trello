@@ -119,7 +119,9 @@ const Sidebar = (props: any) => {
         <div className="col text-center">
           <small className="made text-muted">
             Made with <AiOutlineHeart /> by:{" "}
-            <a href="https://tonatiuhgomez.com/">Tonatiuh</a>
+            <a href="https://tonatiuhgomez.com/" target="_blank">
+              Tonatiuh
+            </a>
           </small>
         </div>
       </div>
