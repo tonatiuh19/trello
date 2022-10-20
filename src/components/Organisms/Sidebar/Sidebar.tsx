@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
-import { AiOutlineInbox } from "react-icons/ai";
+import { AiOutlineInbox, AiOutlineHeart } from "react-icons/ai";
 import { MdUpdate } from "react-icons/md";
 import { FiSettings, FiHash } from "react-icons/fi";
 import { HiOutlineDocumentReport } from "react-icons/hi";
@@ -113,6 +113,14 @@ const Sidebar = (props: any) => {
               );
             })}
           </CollapseMenu>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col text-center">
+          <small className="made text-muted">
+            Made with <AiOutlineHeart /> by:{" "}
+            <a href="https://tonatiuhgomez.com/">Tonatiuh</a>
+          </small>
         </div>
       </div>
     </div>
