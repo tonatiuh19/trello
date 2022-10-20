@@ -7,12 +7,12 @@ export const data: Board[] = [
     cards: [
       {
         id: 1651319552926.0933,
-        title: "Task1",
+        title: "Story1",
         priority: "High",
         tasks: [
-          { id: 1651319625559.8025, completed: true, text: "Task1_subtask1" },
-          { id: 1651319629650.8945, completed: true, text: "Task1_subtask2" },
-          { id: 1651319633774.9905, completed: true, text: "Task1_subtask3" },
+          { id: 1651319625559.8025, completed: true, text: "Story1_subStory1" },
+          { id: 1651319629650.8945, completed: true, text: "Story1_subStory2" },
+          { id: 1651319633774.9905, completed: true, text: "Story1_subStory3" },
         ],
         users: [
           {
@@ -37,11 +37,11 @@ export const data: Board[] = [
               "https://robohash.org/asperioreslaudantiumaut.png?size=100x100&set=set1",
           },
         ],
-        desc: "Task1 Detail Description",
+        desc: "Story1 Detail Description",
       },
       {
         id: 1651319568365.593,
-        title: "Task2",
+        title: "Story2",
         priority: "Lowest",
         tasks: [],
         users: [
@@ -76,7 +76,7 @@ export const data: Board[] = [
     cards: [
       {
         id: 1651319672685.5078,
-        title: "Task3",
+        title: "Story3",
         priority: "Medium",
         tasks: [
           { id: 1651319728301.3855, completed: false, text: "restore db" },
@@ -99,7 +99,7 @@ export const data: Board[] = [
     cards: [
       {
         id: 1651319677070.0732,
-        title: "Task4",
+        title: "Story4",
         priority: "Medium",
         tasks: [
           { id: 1651319728301.3855, completed: false, text: "restore db" },
@@ -136,7 +136,7 @@ export const data: Board[] = [
     cards: [
       {
         id: 1651319680948.0479,
-        title: "Task5",
+        title: "Story5",
         priority: "Highest",
         tasks: [
           { id: 1651319820180.9648, completed: false, text: "GraphQl" },
